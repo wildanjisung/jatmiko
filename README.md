@@ -26,3 +26,5 @@ jangan lupa pada baris paling bawah dikash enter.
 2. tekan tombol submit
 
 3. akan muncul text baru dibawah garis, copy semua text dibawah garis, buka notepad, dan paste, save as dengan extension .csv
+
+![petunjuk](https://user-images.githubusercontent.com/4066931/56103917-6acf1980-5f5f-11e9-9217-58114f4e780e.png)
