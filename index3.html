@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		Address:<br>
+		<textarea id="myTextarea"></textarea>
+		<button type="button" onclick="myFunction()">Submit</button>
+		<hr>
+		<div id="output"></div>
+
+
+		<script>
+			function myFunction() {
+			 	let myString = document.getElementById("myTextarea").value;
+				
+				let myArr2 = [];
+				let txtHeader = `dp,subject,awb,jenis,desc`;
+				myArr2.push(txtHeader);
+
+
+				let bool = true;
+				let myArr = myString.split(/\r?\n/);
+
+				while (bool == true) {
+					let myArr1 = myArr[0].split(" - ");
+
+					let txt = `${myArr1[0]},${myArr1[1]},${myArr[1]},${myArr[2]},${myArr[3]}`;
+					// console.log(txt);
+					myArr2.push(txt);
+
+					myArr = myArr.slice(5);
+					// console.log(myArr);
+					// console.log(myArr.length);
+
+					if (myArr.length < 5) {
+						bool = false;
+					}
+				}
+				// console.log(myArr2);
+
+// 				let txt1 = `${myArr2[0]}
+// ${myArr2[1]}
+// ${myArr2[2]}
+// `;
+				let txt2 = "";
+				for (var i = 0; i < myArr2.length; i++) {
+					txt2 = txt2 + myArr2[i] + '<br />';
+				}
+
+
+
+				console.log(txt2);
+				document.getElementById("output").innerHTML = txt2;
+			}
+		</script>
+
+	</body>
+</html>
