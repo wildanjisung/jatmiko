@@ -14,7 +14,7 @@
 			 	let myString = document.getElementById("myTextarea").value;
 				
 				let myArr2 = [];
-				let txtHeader = `dp,subject,awb,jenis,desc`;
+				let txtHeader = `dp,subject,awb,jenis`;
 				myArr2.push(txtHeader);
 
 
@@ -24,15 +24,15 @@
 				while (bool == true) {
 					let myArr1 = myArr[0].split(" - ");
 
-					let txt = `${myArr1[0]},${myArr1[1]},${myArr[1]},${myArr[2]},${myArr[3]}`;
+					let txt = `${myArr1[0]},${myArr1[1]},${myArr[1]},${myArr[2]}`;
 					// console.log(txt);
 					myArr2.push(txt);
 
-					myArr = myArr.slice(5);
+					myArr = myArr.slice(4);
 					// console.log(myArr);
 					// console.log(myArr.length);
 
-					if (myArr.length < 5) {
+					if (myArr.length < 4) {
 						bool = false;
 					}
 				}
